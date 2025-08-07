@@ -1,10 +1,9 @@
-*.out
+a.out
+program
+
 *.o
-*.exe
-*.obj
 
 *~
-*.log
 
-program
-a.out
+.*
+*.

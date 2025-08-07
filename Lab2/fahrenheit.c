@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-
-int fahrenheit(int c){
+void fahrenheit(int c){
     int f = (1.8*c) + 32;
     printf("Fahrenheit is = %d", f);
 }
