@@ -1,5 +1,5 @@
 #include<stdio.h>
-float PI = 3.13;
+const float PI = 3.14;
 
 float area_of_triagle(int l, int b){
     int area = (l*b)/2;

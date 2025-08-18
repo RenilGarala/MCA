@@ -20,7 +20,6 @@ void empDetail(char emp_name[20], char emp_id[6], char emp_role[20], double basi
     printf("Employee Role %s \n", emp_role);
     printf("Employee Basic Salary is %.2lf \n", basic);
     printf("Employee Gross is %.2f \n", gross_salary);
-
 }
 
 int main(){
