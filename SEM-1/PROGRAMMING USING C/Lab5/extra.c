@@ -9,9 +9,7 @@ int main(){
 
     while(number != 0){
         int remaing = number / n;
-
         int last_char = remaing%10;
-
         if(last_char == 1){
             printf("One ");
         } else if(last_char == 2){
@@ -42,14 +40,3 @@ int main(){
     }
     return 0;
 }
-
-
-
-// 3 4 5 6
-// 3 4 5
-// 3 4 
-// 3
-
-// 3
-// 3 4 
-// 3 4 5 
