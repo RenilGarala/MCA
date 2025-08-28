@@ -101,6 +101,9 @@ void happy_prime_range(int start, int end){
     }
 }
 
+void curculer_prime(){
+}
+
 int main(){
     int choice;
     int number, result;
