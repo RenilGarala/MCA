@@ -3,27 +3,32 @@
 
 int main(){
     int length;
-    printf("Enter number of student");
+    printf("Enter number of student (Number)= ");
     scanf("%d", &length);
 
     char searchName[10];
-    char studentList[length][10];
+    char studentList[length][20];
 
     for(int i = 0; i < length ; i++){
-        printf("Enter Name [%d]", i );
+        printf("Enter Name of [%d] student = ", i+1);
         scanf("%s", studentList[i]);
     }
 
-    printf("Search name");
+    printf("Search name = ");
     scanf("%s", &searchName);
     
     int isfound = 0;
     for(int i = 0; i < length ; i++){
         if(strcmp(studentList[i], searchName) == 0 ){
-            printf("%s Found At [%d] in student list ", searchName, i+1);
+            printf("%s Found At [%d] in student list", searchName, i+1);
             isfound=1;
         }
-        scanf("%s", studentList[i]);
+        if(strcmp("radha", searchName) == 0 ){
+            if(strcmp(studentList[i], "krishna") == 0){
+                printf("%s Found At [%d] in student list", searchName, i+1);
+                isfound=1;
+            }
+        }
     }
 
     if(isfound == 0){
