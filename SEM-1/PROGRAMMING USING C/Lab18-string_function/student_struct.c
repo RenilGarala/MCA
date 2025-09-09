@@ -31,6 +31,7 @@ int main(){
     scanf("%d", &s1.subject3);
 
     printf("%s - %s - %d - %s - %d - %d - %d \n", s1.name, s1.course, s1.year, s1.gender, s1.subject1, s1.subject2, s1.subject3);
-    printf("Toatl marks is %d", s1.subject1 + s1.subject2 + s1.subject3);
+    printf("Toatl marks is %d\n", s1.subject1 + s1.subject2 + s1.subject3);
+    printf("Percentage is %d \n", (s1.subject1 + s1.subject2 + s1.subject3)/3);
     return 0;
 }
