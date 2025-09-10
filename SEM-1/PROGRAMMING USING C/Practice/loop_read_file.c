@@ -9,11 +9,18 @@ int main(){
     //open file in write mode
     ptr = fopen("data.txt", "w");
     
-    //insert data in file
-    fprintf(ptr, "%d \t %s \n", 05, "renil");
-    fprintf(ptr, "%d \t %s \n", 35, "harsh");
-    fprintf(ptr, "%d \t %s \n", 62, "yashpal");
-    fclose(ptr); 
+    //insert data in file in loop
+
+    int length;
+    printf("Enter number of record to store in file : ");
+    scanf("%d", &length);
+
+    for (int i = 0; i < length; i++) {
+        printf("Enter Roll No and Name: ");
+        scanf("%d %s", &n, name);   // ✅ no & before name
+        fprintf(ptr, "%d\t%s\n", n, name);
+    }
+    fclose(ptr);
 
     //create variable to store value of file reading
     ptr = fopen("data.txt","r");
