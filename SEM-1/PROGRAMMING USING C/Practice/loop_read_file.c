@@ -16,8 +16,10 @@ int main(){
     scanf("%d", &length);
 
     for (int i = 0; i < length; i++) {
-        printf("Enter Roll No and Name: ");
-        scanf("%d %s", &n, name);   // ✅ no & before name
+        printf("Enter Roll No: ");
+        scanf("%d", &n); 
+        printf("Enter Name: ");
+        scanf("%s", &name);
         fprintf(ptr, "%d\t%s\n", n, name);
     }
     fclose(ptr);
@@ -30,14 +32,14 @@ int main(){
         printf("File Connection Failed");
         return 1;
     }
-    printf("File content:\n");
 
+    //print value of value variable
+    printf("File content:\n");
     while (fscanf(ptr, "%d %s", &n, name) != EOF) {
         printf("value is %d name is %s\n", n, name);
     }
     fclose(ptr); 
 
-    //print value of value variable
 
     return 0;
 }
