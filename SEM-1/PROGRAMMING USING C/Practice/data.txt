@@ -1,3 +1,3 @@
-1	renil
-2	harsh
-3	jhdjsa
+
+RN	 Name	 mth phy ch ele
+122	 renil	 3	 54	 65	 No

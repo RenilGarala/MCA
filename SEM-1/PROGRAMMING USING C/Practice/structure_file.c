@@ -39,9 +39,15 @@ int main(){
         }
     }
 
-    printf("\nRoll No\t Name\t maths\t physics chemastry elegible");
-    for(int i = 0; i<lenght; i++){
-        printf("\n%d\t %s\t %d\t %d\t %d\t %s", s[i].rollno, s[i].name, s[i].maths, s[i].physics, s[i].chemastry, elegible[i]);
+    FILE *fp;
+    int n;
+    char name[200];
+    fp=fopen("data.txt","w");
+
+    fprintf(fp, "\nRN\t Name\t mth phy ch ele");
+    for(int i=0; i<lenght; i++){
+         fprintf(fp, "\n%d\t %s\t %d\t %d\t %d\t %s", s[i].rollno, s[i].name, s[i].maths, s[i].physics, s[i].chemastry, elegible[i]);
     }
+    fclose(fp);
     return 0;
 }
