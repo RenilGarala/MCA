@@ -14,3 +14,17 @@ console.log(a-=b);
 console.log(a/=b);
 console.log(a*=b);
 console.log(a%=b);
+
+//logical operator
+console.log(a&&b);
+console.log(a||b);
+console.log(!b);
+
+//conditional operator
+console.log(a<b);
+console.log(a>b);
+console.log(a<=b);
+console.log(a>=b);
+console.log(a==b);
+console.log(a!=b);
+
