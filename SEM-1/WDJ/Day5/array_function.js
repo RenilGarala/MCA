@@ -9,7 +9,6 @@ let output = mark.filter((e)=>{
 console.log(output);
 
 
-
 //map
 let map_output = mark.map((i)=>{
     return i*i;
