@@ -59,6 +59,7 @@ int movePlayer(int position) {
 
 int main() {
     srand(time(0));
+    
     int player1 = 0, player2 = 0;
     int winningPosition = 100;
     char userInput;
@@ -79,7 +80,7 @@ int main() {
             printf("%s's turn = \n", player1Name);
             printf("Press 'r' to roll the dice = ");
             scanf(" %c", &userInput); 
-            if (userInput == 'r' || userInput == 'R') {
+            if (userInput == 'r') {
                 player1 = movePlayer(player1);
                 printf("%s is now at position %d.\n\n",player1Name, player1);
             }
@@ -92,7 +93,7 @@ int main() {
             printf("Press 'r' to roll the dice: ");
             scanf(" %c", &userInput); 
 
-            if (userInput == 'r' || userInput == 'R') {
+            if (userInput == 'r') {
                 player2 = movePlayer(player2);
                 printf("%s is now at position %d.\n\n",player2Name, player2);
             }
@@ -110,7 +111,7 @@ int main() {
     }while(choice != 0);
     
     printf("-----------------------------------------\n");
-    printf("| Thanks for playing! Ab Dedo Mam Marks |\n");
+    printf("| Thanks for playing! Ab Marks Dedo Mam |\n");
     printf("-----------------------------------------");
     return 0;
 }

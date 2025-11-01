@@ -13,27 +13,31 @@
         </div>
         <!-- bg-[url('https://example.com/your-image.jpg')] -->
         <div class="buttons flex w-screen justify-center gap-10 mt-10 background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVxtsaxq2duEAoZCnHeD48mmvaaJrj1HJy-g&s');">
-            <div class="bg-zinc-800 py-5 px-7 font-medium rounded-lg hover:scale-105 shadow-white hover:cursor-pointer">
+            <button class="bg-zinc-800 py-5 px-7 font-medium rounded-lg hover:scale-105 shadow-white hover:cursor-pointer">
                 <img src="https://img.icons8.com/?size=30&id=7819&format=png&color=000000" alt=""> 
                 Student Profile
-            </div>
-            <div class="bg-zinc-800 py-5 px-7 font-medium rounded-lg hover:scale-105 shadow-white hover:cursor-pointer">
+            </button>
+            <button class="bg-zinc-800 py-5 px-7 font-medium rounded-lg hover:scale-105 shadow-white hover:cursor-pointer">
                 <img src="https://img.icons8.com/?size=30&id=undefined&format=png&color=000000" alt="">
                 Book Category
-            </div>
-            <div class="bg-zinc-800 py-5 px-7 font-medium rounded-lg hover:scale-105 shadow-white hover:cursor-pointer">
+            </button>
+            <button id="issue-book" onclick="issueBook()" class="bg-zinc-800 py-5 px-7 font-medium rounded-lg hover:scale-105 shadow-white hover:cursor-pointer">
                 <img src="https://img.icons8.com/?size=30&id=41414&format=png&color=000000" alt="">
                 Issue Book
-            </div>
-            <div class="bg-zinc-800 py-5 px-7 font-medium rounded-lg hover:scale-105 shadow-white hover:cursor-pointer">
+            </button>
+            <button id="return-book" onclick="returnBook()" class="bg-zinc-800 py-5 px-7 font-medium rounded-lg hover:scale-105 shadow-white hover:cursor-pointer">
                 <img src="https://img.icons8.com/?size=30&id=Utu32Z-yKkor&format=png&color=000000" alt="">
                 return Book
-            </div>
-            <div class="bg-zinc-800 py-5 px-7 font-medium rounded-lg hover:scale-105 shadow-white hover:cursor-pointer">
+            </button>
+            <button class="bg-zinc-800 py-5 px-7 font-medium rounded-lg hover:scale-105 shadow-white hover:cursor-pointer">
                 <img src="https://img.icons8.com/?size=30&id=undefined&format=png&color=000000" alt="" class="text-center">
                 About us
-            </div>
+            </button>
         </div>
+
+        <div id="output"></div>
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>

@@ -35,7 +35,5 @@ void main(){
 
     while (gameStatus == 0) {
         displayBoard();
-        
     }
-
 }
