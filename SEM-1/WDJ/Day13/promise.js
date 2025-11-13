@@ -9,6 +9,7 @@ function getData(dataid, getNextData) {
     }, 5000);
   });
 }
+
 let promise1 = getData(1);
 console.log(promise1);
 
@@ -25,7 +26,6 @@ promise2
   .catch((err) => {
     console.log("rejected", err);
   });
-
 
   function asyncfunction(){
     return new Promise((resolve, reject) => {

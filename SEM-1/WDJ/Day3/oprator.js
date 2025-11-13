@@ -28,3 +28,6 @@ console.log(a>=b);
 console.log(a==b);
 console.log(a!=b);
 
+//increment and decrement post fix 
+console.log(a++);
+console.log(a--);
