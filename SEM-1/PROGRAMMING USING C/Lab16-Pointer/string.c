@@ -2,6 +2,7 @@
 int main(){
     char arr[20] = "hey there! i am renil garala";
     char *p = arr;
+    p=arr;
 
     //using for loop
     for(int i=0; i<20; i++){

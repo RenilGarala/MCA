@@ -1,24 +1,29 @@
 //C program to read name and marks of n number of students and store them in a file.
 #include<stdio.h>
-struct student{
-    int id;
-    char name[20];
-};
+// struct student{
+//     int id;
+//     char name[20];
+// };
 int main(){
-    FILE *fp;
-    struct student s1;
+    // int a = 30;
+    // printf("%i",a);
 
-    fp = fopen("dys.txt", "a");
+    double average=349999999.454;
+    printf("Average is %lf",average);
+    // FILE *fp;
+    // struct student s1;
 
-    printf("Enter student id and name");
-    scanf("%d %s", &s1.id, s1.name);
-    fprintf(fp, "%d %s",s1.id, s1.name);
+    // fp = fopen("dys.txt", "a");
 
-    fclose(fp);
+    // printf("Enter student id and name");
+    // scanf("%d %s", &s1.id, s1.name);
+    // fprintf(fp, "%d %s",s1.id, s1.name);
 
-    fp = fopen("dys.txt", "r");
-    fscanf(fp,"%d %s",&s1.id, &s1.name);
-    printf("id is %d name is %s",s1.id, s1.name);
+    // fclose(fp);
+
+    // fp = fopen("dys.txt", "r");
+    // fscanf(fp,"%d %s",&s1.id, &s1.name);
+    // printf("id is %d name is %s",s1.id, s1.name);
 
     return 0;
 }

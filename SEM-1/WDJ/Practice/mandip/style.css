@@ -1,0 +1,760 @@
+/* style.css */
+
+/* --- Universal Reset and Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #ff004f; /* Energetic Red/Pink */
+    --secondary-color: #00bcd4; /* Accent Cyan/Blue */
+    --dark-bg: #1a1a1a;
+    --light-bg: #f5f5f5;
+    --text-color-light: #ffffff;
+    --text-color-dark: #333333;
+    --card-bg: #282828;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color-light);
+    background-color: var(--dark-bg);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 0.8em;
+    font-weight: 700;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.container-small {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Utility and Button Styles --- */
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 1.5em;
+    color: var(--text-color-light);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all var(--transition-speed) ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    box-shadow: 0 5px 15px rgba(255, 0, 79, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #cc003f;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(255, 0, 79, 0.6);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+
+/* --- Navigation Bar --- */
+.navbar {
+    background-color: var(--dark-bg);
+    border-bottom: 1px solid #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    font-size: 1.8em;
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.logo h1 {
+    font-size: 1.5em;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: var(--text-color-light);
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-color);
+}
+
+.nav-link.active::after, .nav-link:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color-light);
+    position: relative;
+}
+
+/* --- Main Content and Page Switching --- */
+main {
+    min-height: calc(100vh - 70px - 100px); /* Adjust based on navbar/footer height */
+}
+
+.page {
+    display: none;
+    padding: 60px 0;
+    min-height: 80vh;
+}
+
+.page.active {
+    display: block;
+}
+
+/* --- 1. Home Page Styles --- */
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('gym-hero-bg.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 10;
+    padding: 20px;
+}
+
+.hero-content h2 {
+    font-size: 4.5em;
+    margin-bottom: 0.1em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    font-weight: 300;
+}
+
+/* Features Section */
+.features {
+    background-color: var(--dark-bg);
+    padding-top: 80px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 80px;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    border-top: 5px solid var(--primary-color);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.feature-card h4 {
+    color: var(--text-color-light);
+    font-size: 1.5em;
+}
+
+.feature-card p {
+    color: #aaaaaa;
+}
+
+/* Membership Plans */
+.pricing {
+    background-color: #111111;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.price-card {
+    background-color: var(--card-bg);
+    padding: 40px 25px;
+    border-radius: var(--border-radius);
+    border: 2px solid transparent;
+    transition: all var(--transition-speed);
+}
+
+.price-card.featured {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    border-color: var(--secondary-color);
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 0, 79, 0.4);
+}
+
+.price-card:not(.featured):hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.price-card h4 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.price-card.featured .price {
+    color: var(--text-color-light);
+}
+
+.price span {
+    font-size: 0.5em;
+    font-weight: normal;
+    display: block;
+    color: #aaaaaa;
+}
+
+.price-card.featured .price span {
+    color: #ffffff;
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.plan-features li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cccccc;
+    font-size: 1.1em;
+}
+
+.price-card.featured .plan-features li {
+    color: var(--text-color-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+
+/* --- 2. Trainers Page Styles --- */
+.trainers-section {
+    padding-top: 80px;
+}
+
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.trainer-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition-speed);
+}
+
+.trainer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.trainer-photo {
+    height: 250px;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.photo-placeholder {
+    text-align: center;
+    color: #666666;
+    font-style: italic;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #555555;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    border: 3px solid var(--primary-color);
+}
+
+.trainer-info {
+    padding: 20px;
+}
+
+.trainer-info h3 {
+    color: var(--primary-color);
+    font-size: 1.6em;
+    margin-bottom: 5px;
+}
+
+.specialty {
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.experience {
+    color: #aaaaaa;
+    margin-bottom: 15px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #444444;
+    color: var(--text-color-light);
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+/* --- 3. Diet Plans Page Styles --- */
+.diet-section {
+    padding-top: 80px;
+}
+
+.diet-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.diet-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.2);
+}
+
+.diet-card h3 {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(255, 0, 79, 0.3);
+    padding-bottom: 10px;
+}
+
+.meal-plan {
+    margin-bottom: 20px;
+}
+
+.meal {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #333333;
+    border-left: 5px solid var(--secondary-color);
+    border-radius: 0 5px 5px 0;
+}
+
+.meal h4 {
+    color: var(--text-color-light);
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.meal p {
+    color: #cccccc;
+}
+
+.totals {
+    border-top: 1px dashed #555;
+    padding-top: 15px;
+    font-size: 1.1em;
+    color: var(--text-color-light);
+}
+
+.totals strong {
+    color: var(--primary-color);
+}
+
+.tips-section {
+    padding: 40px 0;
+    border-top: 1px solid #333;
+}
+
+.tips-section h3 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.tips-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.tip-card {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: #111111;
+    border-radius: var(--border-radius);
+    border: 1px solid #333;
+}
+
+.tip-icon {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.tip-card h4 {
+    color: var(--text-color-light);
+}
+
+
+/* --- 4. Contact Page Styles --- */
+.contact-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.contact-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-form {
+    border-right: 1px solid #333;
+    padding-right: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #333;
+    color: var(--text-color-light);
+    font-size: 1em;
+    transition: border-color var(--transition-speed);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-info {
+    padding-left: 40px;
+}
+
+.contact-info h3 {
+    color: var(--secondary-color);
+    font-size: 2em;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(0, 188, 212, 0.3);
+    padding-bottom: 10px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    color: #cccccc;
+}
+
+.contact-info p::before {
+    content: attr(data-icon);
+    margin-right: 10px;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+/* Override existing icons for contact info */
+.contact-info p:nth-child(2)::before { content: '📍'; }
+.contact-info p:nth-child(3)::before { content: '📞'; }
+.contact-info p:nth-child(4)::before { content: '📧'; }
+.contact-info p:nth-child(5)::before { content: '⏰'; }
+
+
+/* --- Footer --- */
+.footer {
+    background-color: #111111;
+    padding: 25px 0;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.footer-logo .logo-icon {
+    margin-right: 8px;
+}
+
+.footer p {
+    color: #888888;
+    font-size: 0.9em;
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 992px) {
+    .diet-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        border-right: none;
+        padding-right: 0;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #333;
+    }
+
+    .contact-info {
+        padding-left: 0;
+        padding-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation Adjustments for Mobile */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #222;
+        position: absolute;
+        top: 65px; /* Height of the navbar */
+        left: 0;
+        padding: 10px 20px;
+        border-top: 1px solid #333;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .nav-link {
+        padding: 10px 0;
+        display: block;
+    }
+
+    .nav-link::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hero Section */
+    .hero-content h2 {
+        font-size: 3em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    /* General Layout */
+    .section-title {
+        font-size: 2em;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card.featured {
+        transform: scale(1);
+    }
+}

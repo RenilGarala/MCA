@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Elite Gym - Trainers</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="nav">
+<h1 class="brand">Elite Gym</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="trainers.html">Trainers</a>
+<a href="diet.html">Diet Plans</a>
+<a href="contact.html">Contact</a>
+<a href="login.html" id="authLink">Login</a>
+</nav>
+</header>
+
+<main class="container">
+<h2>Our Trainers</h2>
+<div class="trainers-grid">
+<div class="trainer">
+<img src="images/trainer1.jpg" alt="Trainer 1">
+<h4>Rohit - Strength Coach</h4>
+</div>
+<div class="trainer">
+<img src="images/trainer2.jpg" alt="Trainer 2">
+<h4>Sonia - Nutritionist</h4>
+</div>
+<div class="trainer">
+<img src="images/trainer3.jpg" alt="Trainer 3">
+<h4>Vikram - Cardio Expert</h4>
+</div>
+</div>
+
+<section class="membership">
+<h3>Take Membership</h3>
+<form id="membershipForm">
+<label>Choose membership type:
+<select id="membershipType">
+<option value="monthly">Monthly - ₹1500</option>
+<option value="quarter">Quarter - ₹4000</option>
+<option value="yearly">Yearly - ₹14000</option>
+</select>
+</label>
+
+<fieldset>
+<legend>Pick training days (choose any):</legend>
+<label><input type="checkbox" name="days" value="Monday"> Mon</label>
+<label><input type="checkbox" name="days" value="Tuesday"> Tue</label>
+<label><input type="checkbox" name="days" value="Wednesday"> Wed</label>
+<label><input type="checkbox" name="days" value="Thursday"> Thu</label>
+<label><input type="checkbox" name="days" value="Friday"> Fri</label>
+<label><input type="checkbox" name="days" value="Saturday"> Sat</label>
+<label><input type="checkbox" name="days" value="Sunday"> Sun</label>
+</fieldset>
+
+<button class="btn" type="submit">Confirm Membership</button>
+</form>
+
+<div id="membershipMsg" class="info"></div>
+</section>
+</main>
+
+<footer class="foot">© Elite Gym</footer>
+<script src="js/auth.js"></script>
+<script src="js/trainers.js"></script>
+</body>
+</html>

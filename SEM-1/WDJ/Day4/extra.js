@@ -1,7 +1,9 @@
 // -------------------------------
 
+let a =1;
 
 function display(){
+
     console.log("Hello World 1");
 }
 
@@ -12,6 +14,7 @@ function display(a,b){
 function display(a,c,b){
     console.log("Hello World 3");
 }
+
 
 display(); 
 //display hello world 3

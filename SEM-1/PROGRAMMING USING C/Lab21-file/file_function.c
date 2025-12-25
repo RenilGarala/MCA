@@ -2,7 +2,7 @@
 
 int main(){
     FILE *fp;
-    char ch[] = "good morning";
+    char ch[100];
 
     fp=fopen("data.txt","r");
     fgets(ch, 100, fp);

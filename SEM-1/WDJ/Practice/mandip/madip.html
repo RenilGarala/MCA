@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Gym - Transform Your Body</title>
+    <!-- Link to the external CSS file (style.css) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💪</span>
+                <h1>ELITE GYM</h1>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="trainers">Trainers</a></li>
+                <li><a href="#" class="nav-link" data-page="diet">Diet Plans</a></li>
+                <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main id="mainContent">
+        
+        <!-- Home Page Content -->
+        <div id="home" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>Transform Your Body</h2>
+                    <p>Join Elite Gym and achieve your fitness goals</p>
+                    <button class="btn-primary">Join Now →</button>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="container">
+                    <h3 class="section-title">Why Choose Elite Gym?</h3>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">👥</div>
+                            <h4>Expert Trainers</h4>
+                            <p>Certified professionals to guide you</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏆</div>
+                            <h4>Modern Equipment</h4>
+                            <p>Latest fitness technology</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🕐</div>
+                            <h4>Flexible Timings</h4>
+                            <p>Open 6 AM to 11 PM daily</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Membership Plans -->
+            <section class="pricing">
+                <div class="container">
+                    <h3 class="section-title">Our Membership Plans</h3>
+                    <div class="pricing-grid">
+                        <div class="price-card">
+                            <h4>Basic</h4>
+                            <div class="price">₹999<span>/month</span></div>
+                            <ul class="plan-features">
+                                <li>✓ Gym Access</li>
+                                <li>✓ Basic Equipment</li>
+                                <li>✓ Locker Facility</li>
+                            </ul>
+                            <button class="btn-secondary">Choose Plan</button>
+                        </div>
+                        <div class="price-card featured">
+                            <h4>Premium</h4>
+                            <div class="price">₹1999<span>/month</span></div>
+                            <ul class="plan-features">
+                                <li>✓ All Basic Features</li>
+                                <li>✓ Personal Trainer</li>
+                                <li>✓ Diet Plan</li>
+                                <li>✓ Steam & Sauna</li>
+                            </ul>
+                            <button class="btn-primary">Choose Plan</button>
+                        </div>
+                        <div class="price-card">
+                            <h4>Elite</h4>
+                            <div class="price">₹3999<span>/month</span></div>
+                            <ul class="plan-features">
+                                <li>✓ All Premium Features</li>
+                                <li>✓ Nutrition Counseling</li>
+                                <li>✓ Spa Access</li>
+                                <li>✓ Group Classes</li>
+                            </ul>
+                            <button class="btn-secondary">Choose Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Trainers Page Content -->
+        <div id="trainers" class="page">
+            <section class="trainers-section">
+                <div class="container">
+                    <h2 class="section-title">Our Expert Trainers</h2>
+                    <div class="trainers-grid">
+                        <!-- Trainer Cards (The JS will inject the booking UI here) -->
+                        <div class="trainer-card">
+                            <div class="trainer-photo">
+                                <div class="photo-placeholder">
+                                    <div class="avatar"></div>
+                                    <p>Add Your Photo Here</p>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h3>Trainer 1</h3>
+                                <p class="specialty">Bodybuilding Specialist</p>
+                                <p class="experience">5+ years experience in strength training</p>
+                                <div class="tags">
+                                    <span class="tag">Strength</span>
+                                    <span class="tag">Nutrition</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trainer-card">
+                            <div class="trainer-photo">
+                                <div class="photo-placeholder">
+                                    <div class="avatar"></div>
+                                    <p>Add Your Photo Here</p>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h3>Trainer 2</h3>
+                                <p class="specialty">Cardio & Endurance Expert</p>
+                                <p class="experience">5+ years experience in strength training</p>
+                                <div class="tags">
+                                    <span class="tag">Cardio</span>
+                                    <span class="tag">Endurance</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trainer-card">
+                            <div class="trainer-photo">
+                                <div class="photo-placeholder">
+                                    <div class="avatar"></div>
+                                    <p>Add Your Photo Here</p>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h3>Trainer 3</h3>
+                                <p class="specialty">Yoga & Flexibility Coach</p>
+                                <p class="experience">5+ years experience in mobility training</p>
+                                <div class="tags">
+                                    <span class="tag">Yoga</span>
+                                    <span class="tag">Flexibility</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trainer-card">
+                            <div class="trainer-photo">
+                                <div class="photo-placeholder">
+                                    <div class="avatar"></div>
+                                    <p>Add Your Photo Here</p>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h3>Trainer 4</h3>
+                                <p class="specialty">Powerlifting Coach</p>
+                                <p class="experience">10+ years competitive powerlifting</p>
+                                <div class="tags">
+                                    <span class="tag">Powerlifting</span>
+                                    <span class="tag">Strength</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trainer-card">
+                            <div class="trainer-photo">
+                                <div class="photo-placeholder">
+                                    <div class="avatar"></div>
+                                    <p>Add Your Photo Here</p>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h3>Trainer 5</h3>
+                                <p class="specialty">Weight Loss Consultant</p>
+                                <p class="experience">8+ years client weight loss results</p>
+                                <div class="tags">
+                                    <span class="tag">Weight Loss</span>
+                                    <span class="tag">Nutrition</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trainer-card">
+                            <div class="trainer-photo">
+                                <div class="photo-placeholder">
+                                    <div class="avatar"></div>
+                                    <p>Add Your Photo Here</p>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h3>Trainer 6</h3>
+                                <p class="specialty">Rehabilitation Specialist</p>
+                                <p class="experience">6+ years post-injury rehab</p>
+                                <div class="tags">
+                                    <span class="tag">Rehab</span>
+                                    <span class="tag">Therapy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Diet Plans Page Content -->
+        <div id="diet" class="page">
+            <section class="diet-section">
+                <div class="container">
+                    <h2 class="section-title">Diet Plans</h2>
+                    <div class="diet-grid">
+                        <div class="diet-card">
+                            <h3>Muscle Gain Plan</h3>
+                            <div class="meal-plan">
+                                <div class="meal">
+                                    <h4>Breakfast (8:00 AM)</h4>
+                                    <p>5 egg whites + 2 whole eggs, Oatmeal 100g, Banana</p>
+                                </div>
+                                <div class="meal">
+                                    <h4>Mid-Morning (11:00 AM)</h4>
+                                    <p>Protein shake, Almonds 30g</p>
+                                </div>
+                                <div class="meal">
+                                    <h4>Lunch (2:00 PM)</h4>
+                                    <p>Chicken breast 200g, Brown rice 150g, Mixed vegetables</p>
+                                </div>
+                                <div class="meal">
+                                    <h4>Evening Snack (5:00 PM)</h4>
+                                    <p>Paneer 100g, Sweet potato</p>
+                                </div>
+                                <div class="meal">
+                                    <h4>Dinner (8:00 PM)</h4>
+                                    <p>Fish/Chicken 200g, Quinoa, Green salad</p>
+                                </div>
+                            </div>
+                            <div class="totals">
+                                <p><strong>Daily Totals:</strong></p>
+                                <p>Calories: 3000-3500 | Protein: 200g | Carbs: 300g | Fats: 80g</p>
+                            </div>
+                        </div>
+                        <div class="diet-card">
+                            <h3>Weight Loss Plan</h3>
+                            <div class="meal-plan">
+                                <div class="meal">
+                                    <h4>Breakfast (8:00 AM)</h4>
+                                    <p>3 egg whites + 1 whole egg, Oats 50g, Green tea</p>
+                                </div>
+                                <div class="meal">
+                                    <h4>Mid-Morning (11:00 AM)</h4>
+                                    <p>Apple, Almonds 15g</p>
+                                </div>
+                                <div class="meal">
+                                    <h4>Lunch (2:00 PM)</h4>
+                                    <p>Grilled chicken 150g, Salad, Brown rice 80g</p>
+                                </div>
+                                <div class="meal">
+                                    <h4>Evening Snack (5:00 PM)</h4>
+                                    <p>Greek yogurt, Mixed berries</p>
+                                </div>
+                                <div class="meal">
+                                    <h4>Dinner (8:00 PM)</h4>
+                                    <p>Grilled fish 150g, Steamed vegetables</p>
+                                </div>
+                            </div>
+                            <div class="totals">
+                                <p><strong>Daily Totals:</strong></p>
+                                <p>Calories: 1800-2000 | Protein: 140g | Carbs: 150g | Fats: 50g</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tips-section">
+                        <h3>Important Tips</h3>
+                        <div class="tips-grid">
+                            <div class="tip-card">
+                                <div class="tip-icon">💧</div>
+                                <h4>Stay Hydrated</h4>
+                                <p>Drink 3-4 liters of water daily</p>
+                            </div>
+                            <div class="tip-card">
+                                <div class="tip-icon">😴</div>
+                                <h4>Sleep Well</h4>
+                                <p>Get 7-8 hours of quality sleep</p>
+                            </div>
+                            <div class="tip-card">
+                                <div class="tip-icon">🥗</div>
+                                <h4>Meal Prep</h4>
+                                <p>Prepare meals in advance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page Content -->
+        <div id="contact" class="page">
+            <section class="contact-section">
+                <div class="container-small">
+                    <h2 class="section-title">Contact Us</h2>
+                    <div class="contact-card">
+                        <div class="contact-form">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" id="name" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="email" placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea id="message" placeholder="Your message here..."></textarea>
+                            </div>
+                            <button class="btn-primary" id="submitBtn">Send Message</button>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <h3>Visit Us</h3>
+                            <p>📍 123 Fitness Street, Ahmedabad, Gujarat</p>
+                            <p>📞 +91 98765 43210</p>
+                            <p>📧 info@elitegym.com</p>
+                            <p>⏰ Open: 6:00 AM - 11:00 PM (All Days)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="logo-icon">💪</span>
+                <span>ELITE GYM</span>
+            </div>
+            <p>&copy; 2024 Elite Gym. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Link to the JavaScript logic file -->
+    <script src="script.js"></script>
+</body>
+</html>

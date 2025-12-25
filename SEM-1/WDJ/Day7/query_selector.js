@@ -17,7 +17,7 @@ console.log(b3);
 // --------------------get element method
 
 //get element by id name 
-let b4 = document.getElementById("nav");
+let b4 = document.querySelector("nav");
 console.log(b4);
 
 //get element by class name 

@@ -5,22 +5,14 @@ struct employee{
     char name[20];
     int basic_salary;
 };
-
 int main(){
-    int lenght;
-    printf("Enter Lenght = ");
-    scanf("%d", &lenght);
-
-    int hra[lenght],da[lenght],pf[lenght],net_salary[lenght];
-    
-    
-    struct employee e[lenght];
-
-    for(int i =0; i<lenght; i++){
+    int hra[5],da[5],pf[5],net_salary[5];
+    struct employee e[5];
+    for(int i = 0; i<5; i++){
         printf("Enter Your ID = ");
         scanf("%d", &e[i].id);
         printf("Enter Your Name = ");
-        scanf(" %[^\n]", e[i].name);
+        scanf(" %s", e[i].name);
         printf("Enter Salary = ");
         scanf("%d", &e[i].basic_salary);
 
@@ -31,7 +23,7 @@ int main(){
     }
 
     printf("\nID\t Name\t\t salary\t Hra\t da\t pf\t Net Salary");
-    for(int i = 0; i<lenght; i++){
+    for(int i = 0; i<5; i++){
         printf("\n%d\t %s\t %d\t %d\t %d\t %d\t %d", e[i].id, e[i].name, e[i].basic_salary, hra[i], da[i], pf[i], net_salary[i]);
     }
     return 0;

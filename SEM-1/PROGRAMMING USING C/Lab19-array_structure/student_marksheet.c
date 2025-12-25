@@ -15,6 +15,8 @@ int main(){
     
     struct student s[lenght];
     char elegible[lenght][4];
+    char namw[10][4];
+    
 
     for(int i = 0; i<lenght; i++){
         printf("Enter Your Roll Number = ");

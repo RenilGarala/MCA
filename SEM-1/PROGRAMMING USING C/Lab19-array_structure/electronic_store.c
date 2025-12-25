@@ -10,7 +10,7 @@ struct shop{
 
 int calculate_discount(struct shop s){
     int discount;
-    if(s.amount>=5000){
+    if(s.amount >=5000){
         discount = s.amount*0.25;
     } else if(s.amount >= 4000 && s.amount < 5000 ){
         discount = s.amount*0.17;

@@ -1,0 +1,119 @@
+:root {
+  --accent: #0b76ef;
+  --muted: #f2f4f8;
+}
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  background: #fff;
+  color: #222;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background: #111;
+  color: #fff;
+}
+.nav a {
+  color: #fff;
+  margin-left: 12px;
+  text-decoration: none;
+}
+.brand {
+  margin: 0;
+}
+.container {
+  max-width: 980px;
+  margin: 28px auto;
+  padding: 0 12px;
+}
+.hero {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.hero-img {
+  width: 48%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #ddd;
+}
+.hero-text {
+  flex: 1;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.features {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+.card {
+  flex: 1;
+  padding: 14px;
+  border-radius: 8px;
+  background: var(--muted);
+}
+.trainers-grid {
+  display: flex;
+  gap: 12px;
+}
+.trainer img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.plan {
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--muted);
+}
+.footer,
+.foot {
+  text-align: center;
+  padding: 16px;
+  color: #666;
+}
+.auth-page {
+  max-width: 420px;
+  margin: 40px auto;
+}
+label {
+  display: block;
+  margin: 8px 0;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+.info {
+  margin-top: 12px;
+  color: green;
+}
+.hidden {
+  display: none;
+}
