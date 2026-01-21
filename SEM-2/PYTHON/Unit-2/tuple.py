@@ -3,9 +3,6 @@
 
 --------------------
 
-
-
-
 lis = input("Enter values of tuple with space saprated").split()
 t = tuple(map(int, lis))
 print(t)
