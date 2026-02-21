@@ -2,7 +2,6 @@ import java.util.*;;
 
 public class EmployeeDemo {
     public static void main(String args[]){
-
         int length;
         double basic;
         String empid, ename;
@@ -33,7 +32,6 @@ public class EmployeeDemo {
         for(int i = 0; i<length; i++){
             e[i].DisplayDetails();
         }
-    
     }
 }
 
