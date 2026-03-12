@@ -7,6 +7,7 @@ struct node
 };
 
 struct node *start;
+
 void insert()
 {
     struct node *newNode, *ptr;

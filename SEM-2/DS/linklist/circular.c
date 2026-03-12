@@ -59,7 +59,23 @@ void display(){
 }
 
 void delete(){
-    
+    struct node *ptr, *prev;
+
+    if(start == NULL){
+        printf("List is Empty");
+        return;
+    }
+    if(start->next == start){
+        start = NULL;
+        return;
+    }
+    ptr = start;
+    while(ptr->next != start){
+        prev = ptr;
+        ptr = ptr->next;
+    }
+    prev->next = start;
+    free(ptr);
 }
 
 void deleteAt(){

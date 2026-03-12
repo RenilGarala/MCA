@@ -6,12 +6,13 @@ int rear=-1;
 
 void enqueue(){
     int num;
-    if(rear==MAX-1 && front==0){
+    if(rear==MAX-1 && front==0 || (rear+1 == front)){
         printf("Queue is overflow");
         return;
     }
     if(front==-1){
         front=front+1;
+        rear=rear+1;
     }
     if(rear==MAX-1 && front!=0){
         rear=0;
@@ -46,7 +47,7 @@ void display(){
         printf("Queue is Empty");
         return;
     }
-    for (int i = front; i <= rear; i++){
+    for (int i = front; i <= rear || rear<front; i++){
         printf("Queue[%d]: %d ----", i, queue[i]);
     }
 }
