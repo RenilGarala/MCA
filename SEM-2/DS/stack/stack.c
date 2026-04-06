@@ -1,5 +1,4 @@
 // stack - push, pop, peek, count, display opration
-
 #include<stdio.h>
 #include<stdlib.h>
 

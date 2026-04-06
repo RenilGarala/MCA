@@ -1,3 +1,5 @@
+from functools import reduce
+
 """
 
 P1 > Take user input and create a menu driven program to perform mathematical operations like addition, subtraction, multiplication, division, integer division, power. Return values from the functions
@@ -178,7 +180,6 @@ l1 = [10,"renil", 20.3, "rohit"]
 l2=list(filter(lambda x:type(x)==str,l1))
 print(l2)
 
-
 ---------------P18> Filter all vowels from the given string.
 
 name = "renilpatel"
@@ -188,12 +189,183 @@ print(x)
 
 ---------------P18> Filter all vowels from the given string.
 
+name = "renilpatel"
+vowel= ["a", "e", "i", "o", "u"]
+x = list(filter(lambda ch: ch in vowel, name))
+print(x)
+
+---------------P19> From the provided list filter, the even numbers and odd numbers as a separate output list
+
+l1=[1,2,3,4,5,6]
+even=list(filter(lambda num: num%2==0,l1))
+odd=list(filter(lambda num: num%2==1,l1))
+
+print(even)
+print(odd)
+
+---------------P20>Write a lambda function that will take 2 inputs. If inputs are integers, it will return the product of 2 numbers. Else perform concatenation.
+
+value1 = eval(input("Enter value 1"))
+value2 = eval(input("Enter value 2"))
+
+output = lambda a,b: a+b if type(a)==str and type(b)==str else int(a)*int(b)
+print(output(value1, value2))
+
+---------------P21>Sort the list elements using lambda
+
+l1 = [5, 2, 9, 1, 5, 6]
+l1.sort(key=lambda x: x)
+print(l1)
+
+
+---------------P22>Find the average of all the elements passed as an argument in lambda (using variable length arguments)
+
+average = lambda *a: sum(a)/len(a)
+avg = average(1, 2, 3, 4, 5, 6)
+print(avg)
+
+def double(n):
+    return n*2
+
+
+
+---------------P23>Find the square of each element of a list (using map())
+
+l1 = [1, 2, 3, 4, 5]
+ans = list(map(lambda x: x**2, l1))
+print(ans)
+
+---------------P24>Use a lambda function to calculate grades for a list of scores (using map()) Eg scores = [88, 92, 78, 95, 86]
+
+scores = [88, 92, 78, 95, 86]
+grade = list(map(lambda x: 'A' if x>=90 else 'B', scores))
+print(grade)
+
+---------------P25>Add all the elements of the list (using reduce())
+
+
+l1 = [1, 2, 3, 4, 5]
+total = reduce(lambda x, y: x + y, l1)
+print(total)
+
+---------------P26>Multiply all the elements of the list (using reduce())
+
+l1 = [1, 2, 3, 4, 5]
+total = reduce(lambda x, y: x * y, l1)
+print(total)
+
+---------------P26>Find the maximum element from the list using reduce()
+
+l1 = [1, 20, 3, 4, 5]
+max = reduce(lambda x, y: x if x > y else y, l1)
+print(max(2,5))
+
+---------------P27>Sorting the dictionary elements using lambda (by using sorted () method) according to age and if age is same then sort my name
+
+stud= [
+    {'name': 'Amit', 'age': 25}, 
+    {'name': 'Bina', 'age': 22}, 
+    {'name': 'Dax', 'age': 25}
+]
+
+sort = sorted(stud, key=lambda x: (x['age'], x['name']))
+print(sort)
+
+---------------P28> Sorting the dictionary elements using lambda (by using sorted () method) according to age and if age is same then sort my name
+
+nums1 = [6, 5, 3, 9]
+nums2 = [0, 1, 7, 7]
+result = list(map(lambda x, y: x + y, nums1, nums2))
+print(result)
+
+---------------P29> Take a list of person names and display them all in upper case using map()
+
+names = ['Alice', 'Bob', 'Charlie']
+upper_names = list(map(lambda name: name.upper(), names))
+print(upper_names)
+
+
+---------------P34> Take a string as an input and display the output to analysis the string based on separate words. Using map()
+A. Display the words in upper case along with the length of each word
+
+input_string = input("Enter a string: ")
+words = input_string.split()
+result = list(map(lambda word: (word.upper(), len(word)), words))
+print(result)
+
+B. Display total number of each vowel in each word
+
+str = input("Enter a string: ")
+vowels = 'aeiouAEIOU'
+result = list(map(lambda word: {vowel: word.count(vowel) for vowel in vowels, length: len(word)}, str.split()))
+print(result)
+
+-------------------P35>Take a matrix as input and transpose its elements using lambda
+
+matrix = [[1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+transposed = zip(matrix)
+print(list(transposed))
+
+-------------------P36>Find the factorial of a number using lambda (recursive)
+
+fact = lambda n: 1 if n==0 else n * fact(n-1)
+print(fact(5))
+
+-------------------P37>Create a menu driven program with user defined functions to insert update delete elements in the dictionary object of employees
+
+employees = {}
+
+def insert_employee(id, name):
+    employees[id] = name
+    print("Employee {name} with ID {id} inserted.")
+
+def update_employee(id, name):
+    if(id in employees):
+        employees[id] = name
+        print("Name is Updated")
+    else:
+        print("Employee id is not define")
+    
+def delete(id):
+    if(id in employees):
+        del employees[id]
+        print("Employee is deleted")
+    else:
+        print("Employee id is not define")
+
+def display():
+    print(employees)
+
+while True:
+    print("Menu:")
+    print("1. Insert Employee")
+    print("2. Update Employee")
+    print("3. Delete Employee")
+    print("4. Display Employee")
+    print("4. Exit")
+
+    choice = int(input("Enter your choice: "))
+    if choice == 1:
+        id=int(input("Enter id = "))
+        name=input("Enter name = ")
+        insert_employee(id, name)
+    elif choice == 2: 
+        id=int(input("Enter id = "))
+        name=input("Enter name = ")
+        update_employee(id, name)
+    elif choice == 3: 
+        id=int(input("Enter id = "))
+        delete(id)
+    elif choice == 4:
+        display()
+    else:
+        print("Enter valid number")
+    
+-------------------P38> Write a python script to generate result for a particular student.
 
 """
-
-name = "renilpatel"
-vowel= ["a", "e", "i", "o", "u"]
-x = list(filter(lambda ch: ch in vowel, name))
-print(x)
 
 

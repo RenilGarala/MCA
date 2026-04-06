@@ -1,3 +1,5 @@
+
+
 public class InterfaceDemo {
     public static void main(String[] args) {
         C d1 = new Demo();

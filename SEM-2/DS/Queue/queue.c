@@ -13,9 +13,10 @@ void enqueue(){
     if(front==-1){
         front=front+1;
     }
-    rear=rear+1;
     printf("Enter element to insert in queue");
     scanf("%d", &num);
+
+    rear=rear+1;
     queue[rear]=num;
 
     printf("Element insert successfully");

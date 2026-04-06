@@ -1,0 +1,19 @@
+charector :
+
+file writer
+file reader
+buffered writer
+buffered reader
+
+byte:
+
+file output String
+        buffered output String - obj.read() 
+        data output String - readInt(), readChar(), readDouble()
+int
+char
+String
+
+read:
+
+file input String

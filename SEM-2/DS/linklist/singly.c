@@ -20,11 +20,11 @@ void insert()
         start = newNode;
     }
     else{
-        ptr = start;
-        while (ptr->next != NULL){
-            ptr = ptr->next;
+        i = start;
+        while (i->next != NULL){
+            i = i->next;
         }
-        ptr->next = newNode;
+        i->next = newNode;
     }
 }
 

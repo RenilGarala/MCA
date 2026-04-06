@@ -1,3 +1,5 @@
+import Extra.Student;
+
 public class StudentAbstract {
     public static void main(String[] args) {
         ScienceStudent sci = new ScienceStudent(10, "renil", 1000);
