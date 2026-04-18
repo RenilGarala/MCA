@@ -3,8 +3,9 @@ m=tk.Tk()
 m.geometry("500x600")
 m.title("Data Entry")
 
-#Form
+# database connection
 
+#Form
 #name label
 label1 = tk.Label(m, text="Enter Name :")
 label1.place(x=5, y=10)
@@ -22,7 +23,7 @@ value2.place(x=120,y=50)
 #Gender Label
 label3 = tk.Label(m, text="Enter Gender : ")
 label3.place(x=5,y=90)
-#radio inout
+#radio input
 v1=tk.IntVar()
 r1 = tk.Radiobutton(m, text="Male", variable=v1, value=1)
 r1.place(x=120,y=90)
@@ -53,6 +54,8 @@ c3 = tk.Checkbutton(m, text="Web Development", variable=v4)
 c3.place(x=280,y=170)
 c4 = tk.Checkbutton(m, text="Cyber Security", variable=v5)
 c4.place(x=360,y=170)
+
+tk.Button
 
 m.mainloop()
 

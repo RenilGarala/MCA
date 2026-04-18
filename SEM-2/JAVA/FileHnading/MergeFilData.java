@@ -3,25 +3,32 @@ import java.io.*;
 public class MergeFilData {
     public static void main(String[] args) {
         try {
-            FileInputStream fint = new FileInputStream("mul.txt");
+            FileInputStream fint1 = new FileInputStream("mul.txt");
             FileInputStream fint2 = new FileInputStream("input.txt");
+
             int i;
-            String file1, file2;
-            file1 = "";
-            file2 = "";
-            while ((i = fint.read()) != -1) {
-                file1 += (char)i + "";
+            StringBuilder file1 = new StringBuilder();
+            StringBuilder file2 = new StringBuilder();
+
+            // Read first file
+            while ((i = fint1.read()) != -1) {
+                file1.append((char) i);
             }
-            fint.close();
+            fint1.close();
+
+            // Read second file
             while ((i = fint2.read()) != -1) {
-                file2 += (char)i + "";
+                file2.append((char) i);
             }
             fint2.close();
 
+            // Write merged data
             FileOutputStream fout = new FileOutputStream("merge.txt");
-            String data = file1 + file2;
+            String data = file1.toString() + "\n" + file2.toString();
             fout.write(data.getBytes());
             fout.close();
+
+            System.out.println("Files merged successfully!");
 
         } catch (Exception e) {
             e.printStackTrace();

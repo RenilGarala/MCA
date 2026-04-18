@@ -1,0 +1,17 @@
+step 1: set i = beg; j = mid+1; index = 0
+step 2: repeat while (i <= mid) and (j<=mid)
+            if arr[i] < arr[j]
+                set temp[index] = arr[i]
+                set i = i + 1
+            else
+                set temp[index] = arr[j]
+                set j = j + 1
+            end of if
+            set index = index + 1
+        [end of loop]
+step 3: if i > mid  
+            repeat while j <= end
+                set temp[index] = arr[j]
+                set index = index + 1, set j = j + 1
+            [end of loop]
+        

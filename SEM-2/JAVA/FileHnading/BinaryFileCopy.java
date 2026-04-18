@@ -9,11 +9,14 @@ public class BinaryFileCopy {
         try {
             FileInputStream fi = new FileInputStream(sourseFile);
             FileOutputStream fo = new FileOutputStream(destinationFile);
+
             int bytesRead;
+
             while((bytesRead = fi.read()) != -1){
                 fo.write(bytesRead);
             }
             System.out.println("File copied successfully!");
+
             fi.close();
             fo.close();
 
