@@ -1,0 +1,7 @@
+
+23 rneil 200 male Python
+43 4rvf 34 male Java Python
+   female NaN
+1 asa 12 male NaN
+23 renil 33 male NaN
+23 44f 434 male Java

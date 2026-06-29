@@ -1,4 +1,3 @@
-def fun:
-    while True:
-        word = str(input("Enter 4 digit letter"))
-        if(len(word)==4)
+f = open("abc.txt","w")
+f.write("Welcome")
+f.close()

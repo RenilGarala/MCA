@@ -63,7 +63,7 @@ else:
 
 
 --------------------5.If an empID is there in the dictionary then display the name of that employee or if not available then add an ID and Name of the employee in the dictionary
-
+"""
 employees = {
     101: "renil",
     102: "tina",
@@ -80,7 +80,7 @@ else:
     employees[searchId] = name
 
 print(employees)
-
+"""
 --------------------6.Change the name of the employee of empID taken by the user
 
 employees = {
@@ -166,7 +166,7 @@ print(stuData)
                         4.Display the rollno who has scored highest marks (total)
                         5.Take 10 numbers from the user and create a list, apply bubble sort and arrange the elements in the list.
 
-"""
+
 
 stuData = {1: [23, 54, 65, 23, 65], 2: [54, 65, 24, 98, 23], 3: [54, 87, 45, 23, 87], 4: [65, 87, 34, 23, 65], 5: [43, 76, 34, 76, 34]}
 result = {}
@@ -184,3 +184,4 @@ for i in range(5):
     data = (total, percentage, grade)
     result[roll] = data
 print(result)
+"""

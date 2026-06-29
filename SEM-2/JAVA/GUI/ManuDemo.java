@@ -56,8 +56,6 @@ public class ManuDemo {
             }
         });
 
-        
-
         mb.add(m1);
         f.setJMenuBar(mb);
     }

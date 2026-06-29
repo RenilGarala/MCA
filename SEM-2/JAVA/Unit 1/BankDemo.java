@@ -3,6 +3,7 @@ import java.util.*;
 public class BankDemo {
     public static void main(){
         Scanner sc = new Scanner(System.in);
+        
     }
 }
 

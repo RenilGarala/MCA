@@ -1,0 +1,2 @@
+man	male	 gym 	A
+man	male	 gym cricket 	C

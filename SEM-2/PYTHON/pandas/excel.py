@@ -9,7 +9,11 @@ df = pd.read_csv('data.csv')
 print(df)
 
 # read dataframe file
-df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+df = pd.DataFrame({
+    'A': [1, 2, 3], 
+    'B': [4, 5, 6]
+    }
+)
 print(df)
 
 df = pd.DataFrame([
@@ -21,6 +25,7 @@ print(df)
 df = pd.DataFrame([
     ['renil', 20, 'delhi'],
     ['sahil', 21, 'mumbai'],
+    ['ab', 21, 'raj'],
 ], columns=['name', 'age', 'city'],index=['a', 'b'])
 print(df)
 
@@ -37,6 +42,7 @@ print(df.index)
 
 #acess specific rows using sliceing 
 print(df[0:1])
+#reverse order
 print(df[::-1])
 
 #access specific columns

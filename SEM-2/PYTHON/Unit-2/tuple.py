@@ -36,7 +36,7 @@ vowal = ("a", "e", "i", "o", "u")
 count = 0
 for i in range(0,len(s1)):
     if(s1[i] in vowal):
-        count = count +1
+        count = count + 1
 
 print("total vowel is = ", count)
 

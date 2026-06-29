@@ -49,6 +49,5 @@ public class AdminForm {
             }
         });
         f.add(b1);
-
     }
 }

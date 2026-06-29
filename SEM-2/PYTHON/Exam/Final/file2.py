@@ -14,31 +14,31 @@ def store_data():
 
 store_data()
 
-# def read_data():
-#     f = open("students.txt", "r")
-#     print(f.read())
-#     f.close()
+def read_data():
+    f = open("students.txt", "r")
+    print(f.read())
+    f.close()
 
-# read_data()
+read_data()
 
-# def search_strudent():
-#     searchrollno = int(input("Enter roll number"))
-#     f = open("students.txt", "r")
-#     isfound = False
-#     for line in f:
-#         # ["renil", "10", "34"]
-#         ld = line.split()
-#         if(searchrollno == int(ld[1])):
-#             isfound= True
-#             print("name: " +ld[0])
-#             print("rollno: "+ ld[1])
-#             print("makrs: "+ ld[2])
+def search_strudent():
+    searchrollno = int(input("Enter roll number"))
+    f = open("students.txt", "r")
+    isfound = False
+    for line in f:
+        # ["renil", "10", "34"]
+        ld = line.split()
+        if(searchrollno == int(ld[1])):
+            isfound= True
+            print("name: " +ld[0])
+            print("rollno: "+ ld[1])
+            print("makrs: "+ ld[2])
         
-#     if(isfound == False):
-#         print("student not found")
-#     f.close()
+    if(isfound == False):
+        print("student not found")
+    f.close()
 
-# search_strudent()
+search_strudent()
 
 def delete_record(deleterollnumber):
     f = open("students.txt", "r")

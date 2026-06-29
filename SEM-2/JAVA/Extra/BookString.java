@@ -4,6 +4,7 @@ public class BookString {
     BookString(String title){
         this.title = title;
     }
+
     public static void main(String[] args) {
         BookString b1 = new BookString("Java");
         BookString b2 = new BookString("Javac");

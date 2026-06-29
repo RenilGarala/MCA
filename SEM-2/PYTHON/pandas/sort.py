@@ -3,7 +3,6 @@ import numpy as np
 
 df = pd.read_csv('data.csv')
 
-
 """display total number of rows and column in the dataframe"""
 print(df.shape)
 
@@ -14,7 +13,7 @@ print(df.head(3))
 print(df.tail(2))
 
 """Display 3rd to 7th row of the dsataframe"""
-print(df[2:7])
+print(df[2:8])
 
 """5.Display all the rows in reverse order."""
 print(df[::-1])
